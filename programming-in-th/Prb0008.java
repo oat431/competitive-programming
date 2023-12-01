@@ -16,3 +16,5 @@ public class Prb0008 {
         System.out.println(x2);
     }
 }
+
+// from : https://programming.in.th/tasks/0008

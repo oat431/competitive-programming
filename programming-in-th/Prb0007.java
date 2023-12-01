@@ -14,3 +14,5 @@ public class Prb0007 {
         System.out.printf("%.6f\n", result2);
     }
 }
+
+// from : https://programming.in.th/tasks/0007
