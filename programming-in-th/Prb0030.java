@@ -24,3 +24,5 @@ public class Prb0030 {
         System.out.println(three+ " " +eleven);
     }
 }
+
+// from : https://programming.in.th/tasks/0030
