@@ -43,3 +43,5 @@ public class Prb0035 {
         ) / 2.0;
     }
 }
+
+// from : https://programming.in.th/tasks/0035
