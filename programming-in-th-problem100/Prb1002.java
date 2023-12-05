@@ -73,3 +73,5 @@ public class Prb1002 {
         }
     }
 }
+
+// from : https://programming.in.th/tasks/1002

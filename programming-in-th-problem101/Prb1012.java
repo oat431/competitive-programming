@@ -14,3 +14,5 @@ public class Prb1012 {
         System.out.println((int)Math.ceil(sum));
     }
 }
+
+// from : https://programming.in.th/tasks/1012
