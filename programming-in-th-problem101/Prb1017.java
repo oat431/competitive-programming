@@ -89,3 +89,5 @@ public class Prb1017 {
         return false;
     }
 }
+
+// from : https://programming.in.th/tasks/1017
