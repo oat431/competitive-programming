@@ -25,4 +25,4 @@ public class Prb1008 {
     }
 }
 
-// from : https://programming.in.th/tasks/1019
+// from : https://programming.in.th/tasks/1008
