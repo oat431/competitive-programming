@@ -2,7 +2,7 @@ import java.io.InputStreamReader;
 import java.io.BufferedReader;
 import java.io.IOException;
 
-public class CodeCube002 {
+public class CodeCube003 {
     public static void main(String[] args) {
         int a = 0;
         int b = 0;
@@ -16,7 +16,7 @@ public class CodeCube002 {
             e.printStackTrace();
         }
 
-        System.out.println(gcd(a, b));
+        System.out.println(a * b / gcd(a, b));
 
     }
 
@@ -25,4 +25,4 @@ public class CodeCube002 {
     }
 }
 
-// from : https://programming.in.th/tasks/codecube_002
+// from : https://programming.in.th/tasks/codecube_003

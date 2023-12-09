@@ -18,3 +18,5 @@ public class CodeCube001 {
         System.out.println(a * b);
     }
 }
+
+// from : https://programming.in.th/tasks/codecube_001
