@@ -42,3 +42,5 @@ public class Prb1000 {
         return chkWord;
     }
 }
+
+// from : https://programming.in.th/tasks/1000
