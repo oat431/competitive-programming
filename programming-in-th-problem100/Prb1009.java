@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
+import java.util.List;
 
 class SevenSegment {
     private char[][] sevenSegment;
@@ -107,18 +108,15 @@ class SevenSegment {
 public class Prb1009 {
     private static final BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
-    private static Long convertSegmentToInteger(SevenSegment[] num) {
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < num.length; i++) {
-            sb.append(num[i].getDigitFromSegment());
-        }
-        return Long.parseLong(sb.toString());
+    private static Long convertSegmentToInteger(List<SevenSegment> num) {
+        return Long.parseLong(num.stream()
+                .map(SevenSegment::getDigitFromSegment)
+                .collect(StringBuilder::new, StringBuilder::append, StringBuilder::append)
+                .toString());
     }
 
-    private static Long addSegment(SevenSegment[] num1, SevenSegment[] num2) {
-        long numResult1 = convertSegmentToInteger(num1);
-        long numResult2 = convertSegmentToInteger(num2);
-        return numResult1 + numResult2;
+    private static Long addSegment(List<SevenSegment> num1, List<SevenSegment> num2) {
+        return convertSegmentToInteger(num1) + convertSegmentToInteger(num2);
     }
 
     private static boolean isSeperateBetweenSegment(int i) {
@@ -128,7 +126,7 @@ public class Prb1009 {
                 i == 39 || i == 43 || i == 47;
     }
 
-    private static SevenSegment[] prepareInput(String[] segment, int n) {
+    private static List<SevenSegment> prepareInput(String[] segment, int n) {
         SevenSegment[] num = new SevenSegment[n];
         for (int i = 0; i < n; i++) {
             num[i] = new SevenSegment();
@@ -155,7 +153,7 @@ public class Prb1009 {
             }
         }
 
-        return num;
+        return List.of(num);
     }
 
     public static void main(String[] args) throws IOException {
@@ -173,8 +171,8 @@ public class Prb1009 {
             rawNum2[i] = in.readLine();
         }
 
-        SevenSegment[] num1 = prepareInput(rawNum1, a);
-        SevenSegment[] num2 = prepareInput(rawNum2, b);
+        List<SevenSegment> num1 = prepareInput(rawNum1, a);
+        List<SevenSegment> num2 = prepareInput(rawNum2, b);
         System.out.println(addSegment(num1, num2));
     }
 }
