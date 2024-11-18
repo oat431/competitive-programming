@@ -119,11 +119,8 @@ public class Prb1009 {
         return convertSegmentToInteger(num1) + convertSegmentToInteger(num2);
     }
 
-    private static boolean isSeperateBetweenSegment(int i) {
-        return i == 3 || i == 7 || i == 11 ||
-                i == 15 || i == 19 || i == 23 ||
-                i == 27 || i == 31 || i == 35 ||
-                i == 39 || i == 43 || i == 47;
+    private static boolean isSeperateBetweenSegment(int i, int n) {
+        return i == (n * 3) + (n - 1);
     }
 
     private static List<SevenSegment> prepareInput(String[] segment, int n) {
@@ -139,7 +136,7 @@ public class Prb1009 {
             tempIdxForEachSegment = 0;
             idxForEachSegment = 0;
             for (int j = 0; j < segmentLength; j++) {
-                if (isSeperateBetweenSegment(j)) {
+                if (isSeperateBetweenSegment(j, idxForEachSegment + 1)) {
                     tempIdxForEachSegment = 0;
                     idxForEachSegment++;
                     continue;
